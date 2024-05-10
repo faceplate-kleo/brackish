@@ -1,28 +1,38 @@
-  - name: Matt
-    nickname: nickname
-  - name: Scheetz
-    nickname: nickname
-  - name: Jay
-    nickname: nickname
-  - name: Kyle
-    nickname: nickname
-  - name: Chandler
-    nickname: nickname
-  - name: Kleo
-    nickname: nickname
-  - name: Spencer
-    nickname: nickname
-  - name: Jon
-    nickname: nickname
-  - name: Andrew
-    nickname: nickname
-  - name: Bacco
-    nickname: nickname
-  - name: Eddy
-    nickname: nickname
-  - name: Med
-    nickname: nickname
-  - name: Luke
-    nickname: nickname
-  - name: Dan
-    nickname: nickname
+- name: Matt
+  nickname: The Likeable Asshole
+- name: Scheetz
+  nickname: $sysadmin
+- name: Jay
+  nickname: Knitting Club
+- name: Kyle
+  nickname: Zweile
+- name: Chandler
+  nickname: Sheriff Channy
+- name: Kleo
+  nickname: The Dazzler
+- name: Spencer
+  nickname: Sponker
+- name: Jon
+  nickname: Jonnui
+- name: Andrew
+  nickname: Sir Derr
+- name: Bacco
+  nickname: The Wendy's Bacconator
+- name: Eddy
+  nickname: Eduardo Spaghardo
+- name: Med
+  nickname: Med
+- name: Luke
+  nickname: The Luke Ness Monster
+- name: Dan
+  nickname: Dantonio Nereed
+- name: Shane
+  nickname: The Shaner
+- name: Tyler
+  nickname: El Hefe Grande
+- name: Hari
+  nickname: College Papa
+- name: Charles
+  nickname: Chuck E. Cheese
+
+

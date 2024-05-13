@@ -10,9 +10,13 @@ import (
 func main() {
 	var loadNum int
 	var playerFile string
+	var show bool
+	var showAndExit bool
 
 	flag.IntVar(&loadNum, "load", -1, "bracket file to load")
 	flag.StringVar(&playerFile, "players", "./playerlist.yaml", "yaml file containing player information")
+	flag.BoolVar(&show, "show", false, "show the bracket")
+	flag.BoolVar(&showAndExit, "showandexit", false, "show the bracket then immediately exit")
 	flag.Parse()
 
 	bracket := brackish.Bracket{}
@@ -34,7 +38,20 @@ func main() {
 	brackish.Shuffle(players, 50)
 
 	bracket.SetStateFromSlice(players)
-	round := 1
+
+	var round int
+   if loadNum != -1 {
+        round = loadNum + 1
+    } else {
+        round = 1
+    }
+
+	if show || showAndExit {
+		bracket.Show()
+		if showAndExit {
+			return
+		}
+	}
 
 	winners := brackish.Team{}
 

@@ -137,6 +137,20 @@ func (b *Bracket) Play() ([]Player, error) {
 	return append(continuing, b.ByPlayers...), nil
 }
 
+func (b *Bracket) Show() {
+    for _, match := range b.State {
+        fmt.Println("-----------")
+        fmt.Printf("%v &\n", match.TeamA.PlayerA.Nickname)
+        fmt.Printf("%v\n", match.TeamA.PlayerB.Nickname)
+        fmt.Println("  \u21D1")
+        fmt.Println("  VS ---------->")
+        fmt.Println("  \u21D3")
+        fmt.Printf("%v &\n", match.TeamB.PlayerA.Nickname)
+        fmt.Printf("%v\n", match.TeamB.PlayerB.Nickname)
+        fmt.Println("-----------")
+    }
+}
+
 func GetWinner(TeamA, TeamB Team) (loser Team, winner Team, err error) {
 	fmt.Printf(
 		"WHO WON?\n1. [%s & %s]\n2. [%s & %s]\n",

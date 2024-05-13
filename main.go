@@ -38,7 +38,13 @@ func main() {
 	brackish.Shuffle(players, 50)
 
 	bracket.SetStateFromSlice(players)
-	round := 1
+
+	var round int
+   if loadNum != -1 {
+        round = loadNum + 1
+    } else {
+        round = 1
+    }
 
 	if show || showAndExit {
 		bracket.Show()

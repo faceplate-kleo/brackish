@@ -149,7 +149,6 @@ func (b *Bracket) Show() {
         fmt.Printf("%v\n", match.TeamB.PlayerB.Nickname)
         fmt.Println("-----------")
     }
-
 }
 
 func GetWinner(TeamA, TeamB Team) (loser Team, winner Team, err error) {

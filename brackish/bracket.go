@@ -32,14 +32,16 @@ func (b *Bracket) SetStateFromSlice(players []Player) {
 
 	teams := make([]Team, 0)
 
+	if len(players)%2 != 0 {
+		byPlayer := players[len(players)-1]
+
+		players = players[:len(players)-1]
+
+		b.ByPlayers = append(b.ByPlayers, byPlayer)
+	}
+
 	for i := 0; i < len(players)-1; i += 2 {
 		playerA := players[i]
-
-		if i == len(players)-1 {
-			b.ByPlayers = append(b.ByPlayers, playerA)
-			i--
-			break
-		}
 
 		playerB := players[i+1]
 
@@ -138,17 +140,17 @@ func (b *Bracket) Play() ([]Player, error) {
 }
 
 func (b *Bracket) Show() {
-    for _, match := range b.State {
-        fmt.Println("-----------")
-        fmt.Printf("%v &\n", match.TeamA.PlayerA.Nickname)
-        fmt.Printf("%v\n", match.TeamA.PlayerB.Nickname)
-        fmt.Println("  \u21D1")
-        fmt.Println("  VS ---------->")
-        fmt.Println("  \u21D3")
-        fmt.Printf("%v &\n", match.TeamB.PlayerA.Nickname)
-        fmt.Printf("%v\n", match.TeamB.PlayerB.Nickname)
-        fmt.Println("-----------")
-    }
+	for _, match := range b.State {
+		fmt.Println("-----------")
+		fmt.Printf("%v &\n", match.TeamA.PlayerA.Nickname)
+		fmt.Printf("%v\n", match.TeamA.PlayerB.Nickname)
+		fmt.Println("  \u21D1")
+		fmt.Println("  VS ---------->")
+		fmt.Println("  \u21D3")
+		fmt.Printf("%v &\n", match.TeamB.PlayerA.Nickname)
+		fmt.Printf("%v\n", match.TeamB.PlayerB.Nickname)
+		fmt.Println("-----------")
+	}
 }
 
 func GetWinner(TeamA, TeamB Team) (loser Team, winner Team, err error) {

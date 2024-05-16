@@ -22,29 +22,30 @@ func main() {
 	bracket := brackish.Bracket{}
 	var err error
 
-	if loadNum != -1 {
+	if loadNum == -1 {
+		players, err := brackish.LoadPlayerFile(playerFile)
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(1)
+		}
+		brackish.Shuffle(players, 50)
+		bracket.SetStateFromSlice(players)
+		_ = bracket.Save()
+	} else {
 		bracket, err = brackish.LoadBracket(loadNum)
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(1)
 		}
+		_ = bracket.Save()
 	}
-
-	players, err := brackish.LoadPlayerFile(playerFile)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
-	brackish.Shuffle(players, 50)
-
-	bracket.SetStateFromSlice(players)
 
 	var round int
-   if loadNum != -1 {
-        round = loadNum + 1
-    } else {
-        round = 1
-    }
+	if loadNum != -1 {
+		round = loadNum + 1
+	} else {
+		round = 1
+	}
 
 	if show || showAndExit {
 		bracket.Show()
@@ -71,8 +72,8 @@ func main() {
 		round += 1
 		brackish.Shuffle(remaining, 50)
 		fmt.Println("############################################################\n\n\n\n\n\n\n\n")
-		_ = bracket.Save()
 		bracket.SetStateFromSlice(remaining)
+		_ = bracket.Save()
 	}
 
 	fmt.Println("THE WINNERS:")

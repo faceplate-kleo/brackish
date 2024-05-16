@@ -1,0 +1,118 @@
+# This is the official starting bracket for TMAD 2024
+state:
+    - teamA:
+        playerA:
+            name: Tejesh
+            nickname: Dr. Spin
+            wins: 0
+            losses: 0
+        playerB:
+            name: Kyle
+            nickname: Zweile
+            wins: 0
+            losses: 0
+      teamB:
+        playerA:
+            name: Jon
+            nickname: Jonnui
+            wins: 0
+            losses: 0
+        playerB:
+            name: Saatwika
+            nickname: Starlight
+            wins: 0
+            losses: 0
+    - teamA:
+        playerA:
+            name: Andrew
+            nickname: Sir Derr
+            wins: 0
+            losses: 0
+        playerB:
+            name: Med
+            nickname: The Medicine
+            wins: 0
+            losses: 0
+      teamB:
+        playerA:
+            name: Shane
+            nickname: The Shaner
+            wins: 0
+            losses: 0
+        playerB:
+            name: Chandler
+            nickname: Sheriff Channy
+            wins: 0
+            losses: 0
+    - teamA:
+        playerA:
+            name: Luke
+            nickname: The Luke Ness Monster
+            wins: 0
+            losses: 0
+        playerB:
+            name: Kleo
+            nickname: The Dazzler
+            wins: 0
+            losses: 0
+      teamB:
+        playerA:
+            name: Eddy
+            nickname: Eduardo Spaghardo
+            wins: 0
+            losses: 0
+        playerB:
+            name: Bacco
+            nickname: The Wendy's Bacconator
+            wins: 0
+            losses: 0
+    - teamA:
+        playerA:
+            name: Jay
+            nickname: Knitting Club
+            wins: 0
+            losses: 0
+        playerB:
+            name: Hari
+            nickname: College Papa
+            wins: 0
+            losses: 0
+      teamB:
+        playerA:
+            name: Tyler
+            nickname: El Hefe Grande
+            wins: 0
+            losses: 0
+        playerB:
+            name: Adam
+            nickname: 2Tall
+            wins: 0
+            losses: 0
+    - teamA:
+        playerA:
+            name: Spencer
+            nickname: Sponker
+            wins: 0
+            losses: 0
+        playerB:
+            name: Matt
+            nickname: The Likeable Asshole
+            wins: 0
+            losses: 0
+      teamB:
+        playerA:
+            name: Ashwini
+            nickname: Sunshine
+            wins: 0
+            losses: 0
+        playerB:
+            name: Dan
+            nickname: Dantonio Nereed
+            wins: 0
+            losses: 0
+byPlayers: 
+    - name: Scheetz
+      nickname: $sysadmin
+      wins: 0
+      losses: 0
+saveNum: 0
